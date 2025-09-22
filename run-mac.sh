@@ -3,6 +3,8 @@
 # Multi-stage Docker build script
 # This builds the Java application inside Docker, so you don't need local Java/Maven
 
+# if ./run-mac.sh not working, try: chmod +x ./run-mac.sh and then ./run-mac.sh
+
 echo "Building phase4-peppol-standalone with multi-stage Docker build..."
 docker buildx build --platform linux/amd64 -t phelger/phase4-peppol-standalone --load -f Dockerfile.multistage .
 
